@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ------------------------
+ Part 1: CSS Transitions
+------------------------- */
+.animated-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.1);
+  background: #0056b3;
+}
+
+/* Pulse animation */
+.pulse-box {
+  width: 80px;
+  height: 80px;
+  background: #1abc9c;
+  margin-top: 20px;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ------------------------
+ Part 3: JS + CSS Animations
+------------------------- */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: #e74c3c;
+  margin-top: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Animation class triggered by JS */
+.move-animation {
+  animation: moveBox 2s forwards;
+}
+
+@keyframes moveBox {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(200px) rotate(45deg); }
+  100% { transform: translateX(0) rotate(0); }
+}
